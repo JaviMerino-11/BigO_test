@@ -1,4 +1,6 @@
-from search_elements.common_data_structures import *
+from search_elements.List import Lista
+from search_elements.Dict import Dict
+from search_elements.Set import Set
 import argparse
 
 
@@ -15,11 +17,14 @@ def main():
     args = parse_args()
 
     if args.structure == 'list':
-        search_elem_list(args.limit)
+        lista = Lista(structure_type=args.structure, numerical_limit=args.limit)
+        lista.search_element_list()
     elif args.structure == 'dict':
-        search_elem_dicc(args.limit)
+        dict = Dict(structure_type=args.structure, numerical_limit=args.limit)
+        dict.search_element_dict()
     elif args.structure == 'set':
-        search_elem_set(args.limit)
+        set = Set(structure_type=args.structure, numerical_limit=args.limit)
+        set.search_element_set()
     else:
         print('Choose a valid data structure: list, set or dict')
 

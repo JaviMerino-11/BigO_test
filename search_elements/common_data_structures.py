@@ -37,3 +37,4 @@ def search_elem_dicc(numerical_limit: int):
     time_finish_dict = time.time()
     dif_temporal_dict = 1e6 * (time_finish_dict - time_begin_dict)
     print('The dict has wasted {} microsecs searching an element'.format(dif_temporal_dict))
+
