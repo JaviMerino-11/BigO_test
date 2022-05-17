@@ -10,7 +10,6 @@ class Dict_Structure(Data_Structure):
     def search_element_dict(self):
         result = None
         target_key = random.randint(0, self.numerical_limit)
-
         if target_key in self._data:
             result = target_key
         return result

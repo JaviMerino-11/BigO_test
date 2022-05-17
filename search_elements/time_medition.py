@@ -7,6 +7,8 @@ def time_medition(function_parameter):
         function_parameter(self)
         stop_medition = time.time()
         temporal_dif_list = 1e6 * (stop_medition - start_medition)
-        print('The %s has wasted %i microsecs searching an element' % (self.structure_type, temporal_dif_list))
+        number_elements = round(self.numerical_limit / 10)
+        print('The %s has wasted %i microsecs searching %i elements' % (
+            self.structure_type, temporal_dif_list, number_elements))
 
     return wrapper

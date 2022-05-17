@@ -37,8 +37,8 @@ def main():
             set_structure = Set_Structure(structure_type=structure_type, numerical_limit=numerical_limit)
             set_structure.search_element_set()
         elif structure_type == STRUCTURE_TYPE_TUPLE:
-            tuple_structure = Set_Structure(structure_type=structure_type, numerical_limit=numerical_limit)
-            tuple_structure.search_element_set()
+            tuple_structure = Tuple_Structure(structure_type=structure_type, numerical_limit=numerical_limit)
+            tuple_structure.search_element_tuple()
         else:
             print('Choose a valid data structure: list, set, tuple or dict')
             sys.exit(-1)

@@ -3,6 +3,7 @@ class Data_Structure(object):
         self.structure_type = structure_type
         self.numerical_limit = numerical_limit
         self._data = self._create_data()
+        self.cocient = round(self.numerical_limit / 10)
 
     def _get_data_type(self):
         raise NotImplementedError
