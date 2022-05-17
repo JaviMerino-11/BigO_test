@@ -8,11 +8,12 @@ class Set_Structure(Data_Structure):
 
     @time_medition
     def search_element_set(self):
-        result = None
-        target_element = random.randint(0, self.numerical_limit)
-        if target_element in self._data:
-            result = target_element
-        return result
+        list_results = [None] * self.cocient
+        for targets in range(self.cocient):
+            target_element = (random.randint(0, self.numerical_limit))
+            if target_element in self._data:
+                list_results[targets] = target_element
+            return list_results
 
     def _get_data_type(self):
         return set
